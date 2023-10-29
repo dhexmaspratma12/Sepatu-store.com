@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+/* bagian header */
+header {
+  height: 70px;
+  position: fixed;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  top: 0;
+}
+.header-left {
+  display: inline-block;
+  float: left;
+  padding: 20px 20px;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+.header-left h1 a {
+  transition: 0.3s;
+  color: rgb(255, 255, 255);
+  background-size: cover;
+}
+.header-left h1 a:hover {
+  color: #f84744;
+}
+.header-right {
+  float: right;
+}
+.header-right ul li {
+  display: inline-block;
+  padding: 24px;
+}
+.header-right ul li a {
+  transition: 0.3s;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  display: block;
+}
+.header-right ul li a:hover {
+  color: #f84744;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+.container::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* bagian sidebar */
+.mobile-menu {
+  float: right;
+  display: none;
+  padding: 18px;
+  color: white;
+}
+.mobile-menu:hover {
+  cursor: pointer;
+}
+#check {
+  display: none;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -300px;
+  width: 300px;
+  text-transform: uppercase;
+  background-color: rgba(36, 36, 36, 0.9);
+  transition: 0.3s;
+  z-index: 9999;
+}
+.sidebar ul li a {
+  color: #fff;
+  display: block;
+  line-height: 70px;
+  padding: 5px 0;
+}
+.sidebar ul li {
+  transition: 0.3s;
+  transition-property: background-color;
+  text-align: center;
+}
+.sidebar ul li:hover {
+  background-color: #f84744;
+}
+#check:checked ~ .sidebar {
+  left: 0;
+}
+
+/* bagian banner */
+.banner {
+  background-image: url(https://images.unsplash.com/photo-1521410409201-2fcbcc0379ee?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80);
+  background-size: cover;
+  padding: 150px 0;
+  transition: none;
+}
+.banner h2,
+.banner p,
+.banner span {
+  color: #fff;
+}
+.banner h2 {
+  margin-bottom: 10px;
+}
+.banner p {
+  font-size: 18px;
+}
+.banner-left {
+  padding-left: 24px;
+}
+
+/* bagian about */
+#about p {
+  text-align: justify;
+  text-indent: 30px;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+.about p {
+  padding: 20px 0;
+}
+
+/* bagian testimonial */
+.testimoni {
+  font-family: Arial;
+  margin: 0 auto; /* Center website */
+  max-width: 800px; /* Max width */
+  padding: 20px;
+}
+.heading {
+  font-size: 25px;
+  margin-right: 25px;
+  padding-bottom: 20px;
+}
+.fa {
+  font-size: 25px;
+}
+.checked {
+  color: orange;
+}
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top: 10px;
+}
+
+.middle {
+  margin-top: 10px;
+  float: left;
+  width: 70%;
+}
+
+/* Place text to the right */
+.right {
+  text-align: right;
+}
+.space {
+  margin-bottom: 20px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-5 {
+  width: 60%;
+  height: 18px;
+  background-color: #000000;
+}
+.bar-4 {
+  width: 30%;
+  height: 18px;
+  background-color: #000000;
+}
+.bar-3 {
+  width: 10%;
+  height: 18px;
+  background-color: #000000;
+}
+.bar-2 {
+  width: 4%;
+  height: 18px;
+  background-color: #000000;
+}
+.bar-1 {
+  width: 15%;
+  height: 18px;
+  background-color: #000000;
+}
+
+/* bagian contact */
+section {
+  padding: 50px 0;
+}
+section h3 {
+  padding-bottom: 20px;
+  text-align: center;
+  margin: 20px;
+  position: relative;
+}
+section h3::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 120px;
+  height: 1px;
+  background-color: #ddd;
+  left: calc(50% - 60px);
+}
+section h3::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  width: 40px;
+  height: 4px;
+  background-color: #f84744;
+  left: calc(50% - 20px);
+}
+#testimoni,
+#contact {
+  background-color: #f9f9f9;
+}
+
+/* bagian product */
+.col-4 {
+  width: 25%;
+  box-sizing: border-box;
+  padding: 5px;
+  float: left;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.col-4 img {
+  width: 100%;
+}
+.col-4 a:hover img {
+  transform: scale(1.2);
+}
+.col-3 {
+  width: 33.33%;
+  box-sizing: border-box;
+  float: left;
+  text-align: center;
+  padding: 50px 10px;
+}
+.col-3 h4 {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+
+/* bagian footer */
+footer {
+  background-color: rgb(0, 0, 0);
+  padding: 50px;
+  text-align: center;
+}
+footer small {
+  color: #fff;
+}
+html {
+  scroll-behavior: smooth;
+}
